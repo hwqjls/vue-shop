@@ -15,6 +15,8 @@ Vue.config.productionTip = false
 
 // 全局引入UI库 vant
 import '../src/plugins/vant'
+// 全局引入rem
+import '@/util/rem'
 
 new Vue({
   router,
