@@ -84,14 +84,15 @@ export default {
 <style scoped>
 #swiper {
   width: 95%;
-  height: 10rem;
-  padding-top: 6rem;
-  border-radius: 1rem;
+  height: 12rem;
+  padding-top: 4rem;
+  overflow: hidden;
 }
 
 #swiper img {
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
 }
 /*
  *穿透修改样式

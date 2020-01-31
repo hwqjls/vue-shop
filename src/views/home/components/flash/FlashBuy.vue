@@ -22,7 +22,7 @@
       <div class="more">更多</div>
     </div>
     <!-- 限时抢购商品 遍历父组件传来的数据并传给子组件 -->
-    FlashFood
+    <FlashFood :flash_sale_product_list="flash_sale_product_list"></FlashFood>
   </div>
 </template>
 
