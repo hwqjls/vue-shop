@@ -51,13 +51,11 @@ export default {
 //@import url();
 
 #wrapper {
-  position: relative;
   margin-top: 0.625rem;
   padding: 1.25rem 0 0.9375rem 0;
   background-color: white;
 
   .titleWrapper {
-    position: relative;
     margin: 0 0.625rem 0.625rem;
     height: 1.5625rem;
 

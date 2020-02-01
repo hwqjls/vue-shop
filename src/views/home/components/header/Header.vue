@@ -7,7 +7,8 @@
 -->
 <template>
   <div class='wrapper'>
-    <div class="locationWrapper">
+    <div class="locationWrapper"
+         ref="location">
       <svg viewBox="0 0 30 30"
            class="icon iconLocation">
         <path fill="#FFFFFF"
@@ -22,7 +23,8 @@
               d="M14.724 19.17c.783.784 2.05.788 2.837 0l5.047-5.047c1.173-1.172.776-2.123-.869-2.123H10.545c-1.652 0-2.04.952-.869 2.123l5.048 5.048z"></path>
       </svg>
     </div>
-    <div class="searchWrapper">
+    <div class="searchWrapper"
+         ref="search">
       <div class="searchContent">
         <div class="iconSearchWrapper">
           <svg viewBox="0 0 32 32"
@@ -63,6 +65,7 @@ export default {
   z-index: 2;
   width: 100%;
   height: 3.125rem;
+  background-color: #fff;
   line-height: 3.125rem;
   border-top: solid 1px #eee;
   color: #fff;
@@ -87,6 +90,10 @@ export default {
       width: 1.875rem;
       height: 1rem;
       vertical-align: middle;
+    }
+
+    .hidden {
+      display: none;
     }
 
     .address {

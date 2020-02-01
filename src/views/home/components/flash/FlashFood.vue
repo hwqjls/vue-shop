@@ -9,8 +9,8 @@
   <div id="flashFood">
     <ul>
       <li class="itemInCovers"
-          v-for="product in flash_sale_product_list"
-          :key="product.id">
+          v-for="(product,index) in flash_sale_product_list"
+          :key="index">
         <img :src="product.small_image">
         <span class="title">{{product.name}}</span>
         <div class="price">
@@ -82,7 +82,6 @@ export default {
 //@import url();
 
 #flashFood {
-  position: absolute;
   top: 3rem;
   width: 100%;
   white-space: normal;
