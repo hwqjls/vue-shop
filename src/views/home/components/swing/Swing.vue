@@ -13,7 +13,8 @@
     <swiper-slide v-for="swing in swing_list"
                   :key="swing.public_id">
       <img :src="swing.icon_url"
-           :alt="swing.public_name">
+           :alt="swing.public_name"
+           v-lazy="swing.icon_url">
     </swiper-slide>
 
     <!-- Optional controls -->

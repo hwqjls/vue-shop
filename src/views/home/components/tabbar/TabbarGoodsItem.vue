@@ -9,14 +9,41 @@
   <div id='tabbarItem'>
     <van-tabs v-model="active"
               ref="tabs"
-              sticky
+              animated
+              swipeable
+              :border="false"
+              :offset-top="47"
+              type="line"
               color="#28BE57"
               title-active-color="#28BE57"
               animated:yes>
-      <van-tab v-for="item in items"
-               :key="item.id"
-               :title="item.title">
-        <ProduceItem :tabbar_all_product_list="tabbar_all_product_list"></ProduceItem>
+      <!-- 全部 -->
+      <van-tab>
+        <div slot="title">
+          <span>{{itemsTitle[0]}}</span>
+        </div>
+        <ProduceItem :product_lists="tabbar_all_product_list"></ProduceItem>
+      </van-tab>
+      <!-- 晚餐 -->
+      <van-tab>
+        <div slot="title">
+          <span>{{itemsTitle[1]}}</span>
+        </div>
+        <ProduceItem :product_lists="flash_sale_product_list" />
+      </van-tab>
+      <!-- 人气 -->
+      <van-tab>
+        <div slot="title">
+          <span>{{itemsTitle[2]}}</span>
+        </div>
+        <ProduceItem :product_lists="tabbar_all_product_list" />
+      </van-tab>
+      <!-- 心选 -->
+      <van-tab>
+        <div slot="title">
+          <span>{{itemsTitle[3]}}</span>
+        </div>
+        <ProduceItem :product_lists="flash_sale_product_list" />
       </van-tab>
     </van-tabs>
   </div>
@@ -27,7 +54,8 @@ import ProduceItem from './ProduceItem'
 
 export default {
   props: {
-    tabbar_all_product_list: Array
+    tabbar_all_product_list: Array,
+    flash_sale_product_list: Array
   },
   components: {
     ProduceItem
@@ -35,56 +63,13 @@ export default {
   data () {
     return {
       active: 0,
-      items: [
-        { id: 1, title: '全部' },
-        { id: 2, title: '晚餐' },
-        { id: 3, title: '人气' },
-        { id: 4, title: '心选' }]
+      itemsTitle: ['全部', '晚餐', '人气', '心选']
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-#tabbarItem {
-  width: 100%;
-}
-</style>
-
-      </van-tab>
-    </van-tabs>
-  </div>
-</template>
-
-<script>
-import ProduceItem from './ProduceItem'
-
-export default {
-  props: {
-    tabbar_all_product_list: Array
-  },
-  components: {
-    ProduceItem
-  },
-  data () {
-    return {
-      active: 0,
-      items: [
-        { id: 1, title: '全部' },
-        { id: 2, title: '晚餐' },
-        { id: 3, title: '人气' },
-        { id: 4, title: '心选' }]
-    };
-  },
-  methods: {
-
-  }
-}
-</script>
-
-<style lang='less' scoped>
-//@import url();
-
 #tabbarItem {
   width: 100%;
 }

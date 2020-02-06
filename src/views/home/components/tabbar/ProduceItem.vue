@@ -8,8 +8,8 @@
 <template>
   <div id="produceItem">
     <div class="item"
-         v-for="product in tabbar_all_product_list"
-         :key="product.id">
+         v-for="(product,index) in product_lists"
+         :key="index">
       <img :src="product.small_image">
       <p class="itemTitle">{{product.name}}</p>
       <p class="itemSubTitle">{{product.spec}}</p>
@@ -65,7 +65,7 @@
 <script>
 export default {
   props: {
-    tabbar_all_product_list: Array
+    product_lists: Array
   },
   components: {},
   data () {
