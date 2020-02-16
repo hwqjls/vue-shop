@@ -15,12 +15,12 @@ import {
 export default {
   // 1. 选中商品的数量
   SELECTED_GOODS_COUNT (state) {
-    // 1.1 取出state中的商品数据
-    let count = 0
-    let shopCart = state.shopCart
+    // 3.1 取出state中的商品数据
+    let count = 0;
+    let shopCart = state.shopCart;
     Object.values(shopCart).forEach((goods, index) => {
       if (goods.checked) {
-        // 3.2 删除选中商品
+        // 6.2删除选中商品
         count++;
       }
     });

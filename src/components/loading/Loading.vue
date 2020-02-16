@@ -66,11 +66,27 @@ export default {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   width: 2.5rem;
   height: 2.5rem;
 }
-
 .load_img {
+  width: 100%;
+  height: 100%;
+  background: url(~@/assets/images/loading/icon_loading.png) no-repeat 0 0;
+  background-size: 2.5rem auto;
+  transform: translateY(0px);
+  animation: load 0.6s infinite ease-in-out;
+  position: relative;
+  z-index: 11;
+}
+.load_ellipse {
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  top: 2.2rem;
+  left: 0.2rem;
+  z-index: 10;
+  animation: ellipse 0.6s infinite ease-in-out;
 }
 </style>

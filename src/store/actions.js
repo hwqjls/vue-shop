@@ -7,7 +7,7 @@ import {
 export default {
   // 1.同步用户信息
   syncuserInfo ({
-    commit
+    commit,
   }, userInfo) {
     commit(USER_INFO, {
       userInfo
@@ -24,5 +24,10 @@ export default {
         userInfo
       });
     }
+  },
+  setLanguage ({
+    commit
+  }, language) {
+    commit("SET_LANGUAGE", language);
   }
 }
