@@ -6,14 +6,23 @@
 * @Description: 
 -->
 <template>
-  <div class='eat'>
-    <h1>吃什么</h1>
+  <div class='eatWrapper'>
+    <!-- 搜索栏 -->
+    <Search></Search>
+    <!-- 今日菜单 -->
+    <TodayMenu></TodayMenu>
   </div>
 </template>
 
 <script>
+import Search from './components/Search'
+import TodayMenu from './components/TodayMenu'
+
 export default {
-  components: {},
+  components: {
+    Search,
+    TodayMenu
+  },
   data () {
     return {
 
@@ -27,4 +36,8 @@ export default {
 
 <style lang='less' scoped>
 //@import url();
+
+#eatWrapper {
+  background-color: "#f5f5f5";
+}
 </style>
