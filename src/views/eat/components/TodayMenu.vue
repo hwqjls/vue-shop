@@ -75,6 +75,13 @@ export default {
       that.menuItemClick(index);
     });
   },
+  watch: {
+    menuDown () {
+      let all = this.$t('eat.all');
+      let close = this.$t('eat.close');
+      this.msg = this.menuDown == true ? all : close;
+    }
+  },
   methods: {
     // 1.获取网络数据
     async _initData () {
@@ -138,6 +145,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+* {
+  touch-action: none;
+}
+
 #todayMenu {
   width: 100%;
   margin: 6.5rem 0 3rem;
