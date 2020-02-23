@@ -235,7 +235,7 @@ export default {
     otherMethods: '其他登录方式',
     wechat: '微信登录',
     qqchant: 'QQ登录',
-    tipTile: '温馨提示：',
+    tipTitle: '温馨提示：',
     tipContent: '未注册的手机号，登录时将自动注册，且代表同意',
     tip: '用户协议',
     tipProcy: '隐私策略',

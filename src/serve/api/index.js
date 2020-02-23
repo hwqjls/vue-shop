@@ -20,3 +20,31 @@ export const getCategoryDetailData = (params) => ajax(BASE_URL + 'homeApi/catego
 export const getTodayMenuCategoryList = () => ajax(BASE_URL + 'recipe/allScene');
 // 菜品菜单
 export const getTodayMenuDetail = (params) => ajax(BASE_URL + 'recipe/menulist' + params);
+
+/***** 购物车页面 猜你喜欢*********/
+export const getGuessYouLike = () => ajax(BASE_URL + 'cart/youlike');
+
+/***** 登录界面接口 *********/
+// 1.获取手机验证码(GET)
+// Easy Mock 模拟发送验证码 
+export const getPhoneCaptcha = (phoneNumber) => ajax(BASE_URL + 'send_code', {
+  phoneNumber
+});
+
+// 2.手机验证码登录(POST)
+// Easy Mock 模拟用户登录
+export const phoneCaptchaLogin = (phone, captcha) => ajax(BASE_URL + 'login_code', {
+  phone,
+  captcha
+}, 'POST');
+
+// 3.账号密码登录(POST)
+export const pwdLogin = (userName, pwd, captcha) => ajax(BASE_URL + 'login_pwd', {
+  userName,
+  pwd,
+  captcha
+}, 'POST');
+
+/***** 个人中心 *********/
+// 1.绿卡Vip
+export const getVipContent = () => ajax(BASE_URL + 'vip');
